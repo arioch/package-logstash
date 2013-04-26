@@ -1,0 +1,6 @@
+*.deb
+*.gz
+*.jar
+*.swp
+.DS_Store
+build
