@@ -1,5 +1,6 @@
 #!/bin/sh
 chown -R 0:0 /etc/logstash
 chown -R 0:0 /usr/share/logstash
+chown -R 0:0 /var/log/logstash
 chmod 755 /etc/init.d/logstash
 

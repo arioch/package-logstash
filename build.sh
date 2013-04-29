@@ -15,6 +15,7 @@ then
   mkdir -p build/etc/logstash
   mkdir -p build/etc/init.d
   mkdir -p build/usr/share/logstash
+  mkdir -p build/var/log/logstash
   cp logstash-${PKG_VERSION}-flatjar.jar build/usr/share/logstash/logstash.jar
   cp logstash.conf build/etc/logstash/
   cp init build/etc/init.d/logstash
