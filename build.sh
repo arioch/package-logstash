@@ -27,11 +27,12 @@ then
     -n logstash \
     -v ${PKG_VERSION} \
     --prefix / \
+    --depends 'java7-runtime-headless | java6-runtime-headless | java7-runtime | java6-runtime' \
     --after-install post-install \
     -C build etc usr
 
   rm -rf logstash
-  #rm -rf logstash-${PKG_VERSION}-flatjar.jar
+  rm -rf logstash-${PKG_VERSION}-flatjar.jar
   rm -rf build
 fi
 
