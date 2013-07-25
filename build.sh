@@ -1,8 +1,9 @@
 #!/bin/sh
-
 set -e
 
-PKG_VERSION=$1
+git clone https://github.com/logstash/logstash.git upstream
+PKG_VERSION=$(cd upstream/; git tag | sort -V | tail -1 | sed -e 's/^v//g')
+rm -rf upstream
 
 if [ ! -f logstash-${PKG_VERSION}-flatjar.jar ]
 then
